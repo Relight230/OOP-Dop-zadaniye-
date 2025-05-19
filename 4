@@ -1,0 +1,13 @@
+class Soda:
+    def __init__(self, supplements):
+        self.supplements = supplements
+
+    def show_my_drink(self):
+        if self.supplements:
+            print(f"Газировка и {self.supplements}")
+        else:
+            print("Просто газировка")
+
+name = input("Введите добавку: ")
+drink = Soda(name if name else None)
+drink.show_my_drink()
